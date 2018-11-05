@@ -1,8 +1,8 @@
-#Test
+# Test
 mvn test
 
-#Build
+# Build
 mvn clean install
 
-#Run 
+# Run 
 java -jar ./target/shopping-cart-1.0-SNAPSHOT.jar

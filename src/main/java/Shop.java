@@ -7,7 +7,7 @@ public class Shop {
             System.out.println("Please provide your shopping list. Press ENTER to submit");
             Customer customer = new Customer();
             List<Fruit> shoppingCart = customer.buy(sc.nextLine());
-            customer.checkOut(shoppingCart);
+            System.out.println(customer.checkOut(shoppingCart));
         }
     }
 }
