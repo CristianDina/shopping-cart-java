@@ -25,7 +25,6 @@ public class CustomerTest {
     @Test
     public void checkOutHappyPath() {
         Customer customer = new Customer();
-        assertEquals("=> £2.05", customer.checkOut(Arrays.asList(Fruit.Apple, Fruit.Apple, Fruit.Orange, Fruit.Apple)));
+        assertEquals("Because of the special offers you have received 2 extra Apples and 1 extra Oranges\n=> £1.95", customer.checkOut(Arrays.asList(Fruit.Apple, Fruit.Orange, Fruit.Orange, Fruit.Orange, Fruit.Apple)));
     }
-
 }
