@@ -8,8 +8,8 @@ public class Customer {
         return Arrays.stream(inputShoppingList.split("\\W")).filter(s -> !s.isEmpty() && Arrays.stream(Fruit.values()).map(Enum::toString).collect(Collectors.toSet()).contains(s)).map(Fruit::valueOf).collect(Collectors.toList());
     }
 
-    public void checkOut(List<Fruit> shoppingCart) {
+    public String checkOut(List<Fruit> shoppingCart) {
         final int total = shoppingCart.stream().mapToInt(Fruit::getPrice).sum();
-        System.out.println("=> £" + total / 100 + "." + String.format("%02d", total % 100));
+        return "=> £" + total / 100 + "." + String.format("%02d", total % 100);
     }
 }
